@@ -29,3 +29,17 @@ int main() {
 		cout<<*(*(yy+i)+j)<<" ";
 		}
 		cout<<endl;
+		}
+	cout<<endl;
+	cout<<"jumlah kata yang dicari : ";
+	cin>>kata;
+	
+	int akhir[kata],last[kata],pjg[kata];
+	char word[kata][15];
+	cin.ignore();
+	
+	for(int x=0;x<kata;x++){
+		cout<<x+1<<".";
+		cin.getline(word[x],15);
+		pjg[x]=strlen(word[x]);
+}
