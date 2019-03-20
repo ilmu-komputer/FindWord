@@ -60,3 +60,43 @@ int main() {
 			}
 		}
 	}
+	for(int h=0;h<pkata;h++){
+            if (ada[h]==1){
+            hasil=1;
+            akhir[b]+=hasil;
+        }else{
+        hasil=0;
+        break;
+        }if (akhir[b]==pkata){
+        last[b]=1;
+        goto next;
+    }
+}
+akhir[b]=0;
+x=0;
+    }
+}
+for (d=0;d<15;d++){
+  for(int c=0;c<=(15pkata);c++){
+     for(int e=0;c<=e+(pkata-1;e++){
+      if(*(*(Y+c)+e) == kata[c][x] ada[x] = 1;
+      else ada[x] = 0;
+      x++;
+}
+  for(int k=0;k<pkata;k++){
+   if (ada[k]==1) {
+   hasil=1;
+   hasil[b]+=hasil;
+}else {
+  hasil=0;
+  break;
+}
+ if(akhirl[b]==pkata){
+   last[b]=1;
+goto next;
+    }
+}
+akhir[b]=0;
+x=0;
+     }
+}
