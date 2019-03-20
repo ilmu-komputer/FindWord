@@ -46,6 +46,7 @@ int main() {
 		for(int b=1;b<kata;b++){
 		akhir[b]=0;
 		int pkata=pjg[b],x=0;
+		int *px=&x;
 		bool ada[pkata],hasil;
 		
 	for(int c=0;c<15;c++){
@@ -100,3 +101,71 @@ akhir[b]=0;
 x=0;
      }
 }
+
+for (int r=0;r<15;r++){
+for (int t=0;t<=(pkata);t++){
+dgnl=-1;
+	for(int l=t;l<=l+(pkata);l++){
+	++dgnl;
+	if(*(*Y+j)+dn+dgnl) == kata[b][x]) ada[x]=1;
+	else ada[x]=0;
+	x++
+	}
+	for(int f=0;f<pkata;f++){
+		if(ada [f]==1){
+		hasil = 1;
+		akhir[b]+=hasil;
+		}
+		else{
+		hasil = o;
+		break;
+		}
+		if(akhir[b]==pkata){
+		last[b]=1;
+		x;
+		}
+	}
+	akhir[b]=0;
+	x=0;
+}
+
+for (int dr=14;dr>=0;dr--){
+	for (int i=0;i<=(15-pkata);i++){
+	dgnl=-1;
+		for (int j=i;j<=i+(pkata-1);j++){
+			++dgnl;
+			if(*(*Y+j)+dr-dgnl) == kata[b][x]) ada[x] = 1;
+			else ada[x]=0;
+			x++;
+		}
+		for (int k=0;k<pkata;k++){
+		if(ada[k]=1){
+			hasil = 1;
+			akhir[b]+ = akhir;}
+		else{
+			hasil=0;
+			break;}
+		if(akhir[b]==pkata){
+			last [b]=1;
+			x;}
+		}
+		akhir [b]=0;
+		x=0;}
+}	
+cout<<*px;
+}
+
+cout<<endl<<"Hasil Pencarian Kata : "<<endl;
+for (int a=0; a<jum_kata;a++){
+	if (last[a]==1){
+		cout<<a+1<<". ADA"<<endl;
+		}
+	else cout<<a+1<<". TIDAK ADA"<<endl;}
+return 0;}
+		
+		
+	
+
+		
+	
+	
