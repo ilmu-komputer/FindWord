@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+	int kata;
+	char fw1[] = {'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'};
+	char fw2[] = {'a','a','u','n','t','t','m','m','h','f','o','o','d','n','b'};
+	char fw3[] = {'j','l','w','c','q','l','d','z','m','p','m','v','d','m','r'};
+	char fw4[] = {'a','s','a','g','m','q','u','w','v','v','b','s','o','h','i'};
+	char fw5[] = {'b','w','p','l','o','t','a','n','a','d','t','p','g','n','c'};
+	char fw6[] = {'r','e','w','n','g','o','d','j','c','p','n','a','t','n','k'};
+	char fw7[] = {'e','e','o','t','w','o','s','b','q','h','a','r','r','s','a'};
+	char fw8[] = {'a','z','c','g','e','s','w','e','w','n','a','k','n','p','b'};
+	char fw9[] = {'d','i','n','n','e','r','q','o','d','l','w','d','c','a','r'};
+	char fw10[]= {'o','n','o','p','k','w','m','p','a','r','k','t','z','c','c'};
+	char fw11[]= {'q','b','f','r','o','g','m','a','m','w','p','w','e','e','y'};
+	char fw12[]= {'l','q','z','q','n','n','m','r','z','j','j','s','c','l','g'};
+	char fw13[]= {'m','o','s','g','z','c','z','e','t','d','b','o','o','t','o'};
+	char fw14[]= {'p','d','c','r','z','m','s','n','g','r','d','n','r','p','z'};
+	char fw15[]= {'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'};
+	char *yy[]={fw1,fw2,fw3,fw4,fw5,fw6,fw7,fw8,fw9,fw10,fw11,fw12,fw13,fw14,fw15};
+	
+	for(int i=0;i<15;i++){
+		for(int j=0;j<15;j++){
+		cout<<*(*(yy+i)+j)<<" ";
+		}
+		cout<<endl;
