@@ -22,150 +22,154 @@ int main() {
 	char fw13[]= {'m','o','s','g','z','c','z','e','t','d','b','o','o','t','o'};
 	char fw14[]= {'p','d','c','r','z','m','s','n','g','r','d','n','r','p','z'};
 	char fw15[]= {'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'};
-	char *yy[]={fw1,fw2,fw3,fw4,fw5,fw6,fw7,fw8,fw9,fw10,fw11,fw12,fw13,fw14,fw15};
+	char *Y[]={fw1,fw2,fw3,fw4,fw5,fw6,fw7,fw8,fw9,fw10,fw11,fw12,fw13,fw14,fw15};
 	
-	for(int i=0;i<15;i++){
-		for(int j=0;j<15;j++){
-		cout<<*(*(yy+i)+j)<<" ";
-		}
-		cout<<endl;
-		}
-	cout<<endl;
-	cout<<"jumlah kata yang dicari : ";
-	cin>>kata;
-	
-	int akhir[kata],last[kata],pjg[kata];
-	char word[kata][15];
-	cin.ignore();
-	
-	for(int x=0;x<kata;x++){
-		cout<<x+1<<".";
-		cin.getline(word[x],15);
-		pjg[x]=strlen(word[x]);
-		}
-		for(int b=1;b<kata;b++){
-		akhir[b]=0;
-		int pkata=pjg[b],x=0;
-		int *px=&x;
-		bool ada[pkata],hasil;
-		
-	for(int c=0;c<15;c++){
-		for(int i=0;i<=(15-pkata);i++){
-			for(int j=i;j<=i+(pkata-1);j++){
-				if(*(*(yy+i)+j)==word[b][x]){
-					ada[x]=1;
-				}else{
-					ada[x]=0;
-					x++;
-				}
-			}
-		}
-	}
-	for(int h=0;h<pkata;h++){
-            if (ada[h]==1){
-            hasil=1;
-            akhir[b]+=hasil;
-        }else{
-        hasil=0;
-        break;
-        }if (akhir[b]==pkata){
-        last[b]=1;
-        goto next;
+	 for(int a = 0; a<15; a++) {
+        for(int b=0; b<15; b++)
+        cout<<*(*(Y+a)+b)<<"  ";
+        cout<<endl;
     }
-}
-akhir[b]=0;
-x=0;
+
+            int jum_kata;
+                cout<<endl<<"Masukkan Jumlah Kata yang akan dicari : ";
+                cin>>jum_kata;
+            int hasil[jum_kata], hasil_akhir[jum_kata], panjang[jum_kata] , dgnl;
+                char kata[jum_kata][15];
+
+    cin.ignore();
+    for(int a=0; a<jum_kata; a++) {
+        cout<<a+1<<". ";
+        cin.getline(kata[a], 15);
+        panjang[a]=strlen(kata[a]);  
     }
-}
-for (d=0;d<15;d++){
-  for(int c=0;c<=(15pkata);c++){
-     for(int e=0;c<=e+(pkata-1;e++){
-      if(*(*(Y+c)+e) == kata[c][x] ada[x] = 1;
-      else ada[x] = 0;
-      x++;
-}
-  for(int k=0;k<pkata;k++){
-   if (ada[k]==1) {
-   hasil=1;
-   hasil[b]+=hasil;
-}else {
-  hasil=0;
-  break;
-}
- if(akhirl[b]==pkata){
-   last[b]=1;
-goto next;
+
+    for(int m=0; m<jum_kata; m++) {
+        hasil[m]=0;
+        int panjang_kata = panjang[m], x=0;
+        int *px=&x;
+        bool ada[panjang_kata], result;
+       
+        for(int r = 0 ; r < 15 ; r++){
+            for(int a=0; a<=(15-panjang_kata);
+            a++) {
+                for(int b=a; b<=a+(panjang_kata-1);
+                b++) {
+                    if(*(*(Y+r)+b) == kata[m][x]) ada[x] = 1;
+                    else ada[x] = 0;
+                    x++;
+                }
+                for(int k=0; k<panjang_kata;
+                k++) {
+                    if(ada[k]==1) {
+                        result = 1;
+                        hasil[m]+=result;
+                    }
+                else {
+                    result = 0;
+                    break;
+                    }
+                    if(hasil[m]==panjang_kata) {
+                        hasil_akhir[m]=1;
+                        x;
+                    }
+                }
+                hasil[m]=0;
+                x=0;
+            }
+        }
+
+        for(int c = 0 ; c < 15 ; c++){
+            for(int a=0; a<=(15-panjang_kata); a++) {
+                for(int b=a; b<=a+(panjang_kata-1); b++) {
+                    if(*(*(Y+b)+c) == kata[m][x]) ada[x] = 1;
+                    else ada[x] = 0;
+                    x++;
+                }
+                for(int k=0; k<panjang_kata; k++) {
+                    if(ada[k]==1) {
+                        result = 1;
+                        hasil[m]+=result;
+                    }
+                else {
+                result = 0;
+                    break;
+                    }
+                    if(hasil[m]==panjang_kata) {
+                        hasil_akhir[m]=1;
+                        x;
+                    }
+                }
+                hasil[m]=0;
+                x=0;
+            }
+        }
+
+            for(int dn = 0 ; dn < 15 ; dn++){
+            for(int i=0; i<=(15-panjang_kata); i++) {
+            dgnl=-1;
+                for(int j=i; j<=i+(panjang_kata-1); j++) {
+                    ++dgnl;
+                    if(*(*(Y+j)+dn+dgnl) == kata[m][x]) ada[x] = 1;
+                    else ada[x] = 0;
+                    x++;
+                }
+                for(int k=0; k<panjang_kata; k++) {
+                    if(ada[k]==1) {
+                        result = 1;
+                        hasil[m]+=result;
+                    }
+                    else {
+                        result = 0;
+                        break;
+                    }
+                    if(hasil[m]==panjang_kata) {
+                        hasil_akhir[m]=1;
+                        x;
+                    }
+                }
+               hasil[m]=0;
+                x=0;
+            }
+        }
+
+        for(int dr = 14 ; dr >= 0 ; dr--){
+            for(int i=0; i<=(15-panjang_kata); i++) {
+            dgnl=-1;
+                for(int j=i; j<=i+(panjang_kata-1); j++) {
+                    ++dgnl;
+                    if(*(*(Y+j)+dr-dgnl) == kata[m][x]) ada[x] = 1;
+                    else ada[x] = 0;
+                    x++;
+                }
+                for(int k=0; k<panjang_kata; k++) {
+                    if(ada[k]==1) {
+                        result = 1;
+                        hasil[m]+=result;
+                    }
+                else {
+                        result = 0;
+                        break;
+                        
+                    }
+                if(hasil[m]==panjang_kata) {
+                        hasil_akhir[m]=1;
+                        x;
+                    }
+                }
+                hasil[m]=0;
+                x=0;
+            }
+        }
+        cout<<*px;
     }
-}
-akhir[b]=0;
-x=0;
-     }
-}
 
-for (int r=0;r<15;r++){
-for (int t=0;t<=(pkata);t++){
-dgnl=-1;
-	for(int l=t;l<=l+(pkata);l++){
-	++dgnl;
-	if(*(*Y+j)+dn+dgnl) == kata[b][x]) ada[x]=1;
-	else ada[x]=0;
-	x++
-	}
-	for(int f=0;f<pkata;f++){
-		if(ada [f]==1){
-		hasil = 1;
-		akhir[b]+=hasil;
-		}
-		else{
-		hasil = o;
-		break;
-		}
-		if(akhir[b]==pkata){
-		last[b]=1;
-		x;
-		}
-	}
-	akhir[b]=0;
-	x=0;
+    cout<<endl<<"Hasil pencarian kata : "<<endl;
+    for(int a=0; a<jum_kata; a++) {
+        if(hasil_akhir[a]==1)
+        {
+            cout<<a+1<<". ADA"<<endl;
+        }
+        else cout<<a+1<<". TIDAK ADA"<<endl;
+    }
+    return 0;
 }
-
-for (int dr=14;dr>=0;dr--){
-	for (int i=0;i<=(15-pkata);i++){
-	dgnl=-1;
-		for (int j=i;j<=i+(pkata-1);j++){
-			++dgnl;
-			if(*(*Y+j)+dr-dgnl) == kata[b][x]) ada[x] = 1;
-			else ada[x]=0;
-			x++;
-		}
-		for (int k=0;k<pkata;k++){
-		if(ada[k]=1){
-			hasil = 1;
-			akhir[b]+ = akhir;}
-		else{
-			hasil=0;
-			break;}
-		if(akhir[b]==pkata){
-			last [b]=1;
-			x;}
-		}
-		akhir [b]=0;
-		x=0;}
-}	
-cout<<*px;
-}
-
-cout<<endl<<"Hasil Pencarian Kata : "<<endl;
-for (int a=0; a<jum_kata;a++){
-	if (last[a]==1){
-		cout<<a+1<<". ADA"<<endl;
-		}
-	else cout<<a+1<<". TIDAK ADA"<<endl;}
-return 0;}
-		
-		
-	
-
-		
-	
-	
