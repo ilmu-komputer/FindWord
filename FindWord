@@ -1,5 +1,5 @@
 #include <iostream>
-#include <c.string>
+#include <cstring>
 using namespace std;
 int main() {
 	int kata;
