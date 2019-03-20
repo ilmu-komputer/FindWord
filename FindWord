@@ -2,6 +2,7 @@
 //1817051020 Gema Annisa Hermastuti
 //1817051060 Afifah
 //1857051008 Yulivia Annisa Putri
+
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -24,12 +25,13 @@ int main() {
 	char fw15[]= {'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'};
 	char *yy[]={fw1,fw2,fw3,fw4,fw5,fw6,fw7,fw8,fw9,fw10,fw11,fw12,fw13,fw14,fw15};
 	
+	//untuk menampilkan tabe-tabel karakter di atas
 	for(int a = 0; a<15; a++) {
         for(int b=0; b<15; b++)
         cout<<*(*(yy+a)+b)<<"  ";
         cout<<endl;
     }
-
+	//mengetahui jumlah kata yang akan dicari pada findword
             int jum_kata;
                 cout<<endl<<"Masukkan Jumlah Kata yang akan dicari : ";
                 cin>>jum_kata;
@@ -37,6 +39,7 @@ int main() {
                 char kata[jum_kata][15];
 
     cin.ignore();
+    //input semua kata yang akan dicari
     for(int a=0; a<jum_kata; a++) {
         cout<<a+1<<". ";
         cin.getline(kata[a], 15);
