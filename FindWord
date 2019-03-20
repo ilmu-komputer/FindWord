@@ -42,4 +42,21 @@ int main() {
 		cout<<x+1<<".";
 		cin.getline(word[x],15);
 		pjg[x]=strlen(word[x]);
-}
+		}
+		for(int b=1;b<kata;b++){
+		akhir[b]=0;
+		int pkata=pjg[b],x=0;
+		bool ada[pkata],hasil;
+		
+	for(int c=0;c<15;c++){
+		for(int i=0;i<=(15-pkata);i++){
+			for(int j=i;j<=i+(pkata-1);j++){
+				if(*(*(yy+i)+j)==word[b][x]){
+					ada[x]=1;
+				}else{
+					ada[x]=0;
+					x++;
+				}
+			}
+		}
+	}
